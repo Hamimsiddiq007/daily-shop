@@ -1,10 +1,20 @@
-import React from 'react'
+import { ShoppingCart } from 'lucide-react'
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   return (
     <div>
-      <div className="mx-auto flex justify-between items-center px-6 py-3 fixed top-0 z-20 bg-gray-100 w-full border border-gray-100">
-        <h1>Hello</h1>
+      <div className="mx-auto flex justify-between items-center px-6 py-3 fixed top-0 z-20 bg-green-100 w-full border border-gray-100 shadow-xl lg:px-45">
+        <img src={logo} alt="" className='md:w-52 w-40' />
+        <nav className='flex gap-5'>
+          <ul className='text-xl font-semibold md:flex items-center gap-7 hidden'>
+            <li>Home</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <ShoppingCart className='w-6 h-6'/>
+        </nav>
       </div>
     </div>
   )
